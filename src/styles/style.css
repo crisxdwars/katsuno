@@ -9,6 +9,16 @@
     user-select: none;
 }
 
+@keyframes load {
+    0% {
+        transform: translateX(-300px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 body {
     background: var(--body-bg);
     padding: 2rem;
@@ -83,6 +93,7 @@ body {
                 color: var(--text);
                 font-size: 42px;
                 font-family: Montserrat;
+                animation: load 0.5s ease-out;
             }
 
             p {
@@ -90,6 +101,7 @@ body {
                 font-size: 24px;
                 font-weight: 700;
                 margin-top: -12px;
+                animation: load 1s ease-out;
             }
 
             .buttons {
@@ -98,6 +110,7 @@ body {
                 justify-content: flex-start;
                 gap: 0px;
                 margin-left: 10px;
+                animation: load 1.5s ease-out;
 
                 button {
                     background: var(--body-bg);
