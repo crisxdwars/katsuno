@@ -64,7 +64,6 @@
 body {
     background: var(--body-bg);
     /* padding: 2rem; */
-    touch-action: none;
     overflow: hidden;
 
     .lines {
