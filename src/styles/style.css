@@ -27,10 +27,24 @@
     }
 }
 
+@keyframes toast-open {
+    0% {
+        bottom: -200px;
+    } 30% {
+        bottom: 40px;
+    } 60% {
+        bottom: 50px;
+    } 100% {
+        bottom: 20px;
+    }
+
+}
+
 body {
     background: var(--body-bg);
     /* padding: 2rem; */
     touch-action: none;
+    overflow: hidden;
 
     .lines {
         opacity: 0.08;
@@ -140,7 +154,7 @@ body {
                     }
                 }
 
-                .for-more-info {
+                #read {
                     border-top-right-radius: 0;
                     border-bottom-right-radius: 0;
                     border-right: none !important;
@@ -168,6 +182,53 @@ body {
         }
     }
 
+    #toast {
+        position: absolute;
+        bottom: 20px; left: 50%;
+        transform: translateX(-50%);
+        height: 3rem; width: 15rem;
+        border: var(--border); border-radius: 8px;
+        z-index: 5;
+        animation: toast-open 1s ease-in-out;
+        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+        place-items: center;
+        padding: 5px;
+        transition: all 0.5s;
+        visibility: visible;
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+
+        .left {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            border-right: var(--border);
+
+            i {
+                display: flex;
+                place-items: center;
+                color: orange;
+            }
+        }
+
+        .right {
+            flex: 5;
+            padding: 5px;
+        
+            p {
+                color: white;
+                font-size: 12px;
+            }
+        }
+    }
+
+    #toast.toastClose {
+        opacity: 0;
+        visibility: hidden;
+    }
+
     @media(max-width: 1200px) {
         .katsuno {
             opacity: 0;
@@ -184,9 +245,13 @@ body {
 
         .hero {
             padding: 10px 20px;
+
+            button {
+                border-radius: 5px !important;
+            }
         }
 
-        .for-more-info {
+        #read {
             display: none;
         }
     }

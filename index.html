@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katsuno Art!</title>
-    <link rel="stylesheet" href="src/styles/style.css?release=0.2">
+    <link rel="stylesheet" href="src/styles/style.css?release=0.3">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" type="images/x-icon" href="src/images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body id="main">
     <div class="lines"></div>
     <div class="bg"></div>
     <div class="top">
@@ -22,16 +23,27 @@
     </div>
     <div class="hero">
         <div class="left">
-            <h2>Introducing Katsuno Bloodline<span><img src="src/images/katsuno-crest-transparent.png" alt=""></span></h2>
+            <h2>Introducing Katsuno Bloodline</h2>
             <p>"The Unbroken Line."</p>
             <div class="buttons">
-                <div class="for-more-info"></div>
-                <button>Read more</button>
+                <div id="read"></div>
+                <button onclick="e_button(this, 'toastClose')">Read more</button>
             </div>
         </div>
         <div class="right">
             <div class="katsuno"></div>
         </div>
     </div>
+    <div id="toast" class="toastClose">
+        <div class="left">
+            <!--idek-->
+            <i class="fa-solid fa-hammer"></i>
+        </div>
+        <div class="right">
+            <!--Err-Informations-->
+            <p>The button doesn't work yet heh.</p>
+        </div>
+    </div>
+    <script src="src/scripts/script.js"></script>
 </body>
 </html>
