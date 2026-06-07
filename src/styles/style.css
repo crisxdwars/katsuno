@@ -1,6 +1,6 @@
 :root {
     --body-bg: rgba(0,0,0);
-    --border: 1px solid rgba(100,100,100,0.2);
+    --border: 1px solid rgba(100,100,100,0.5);
     --text: rgb(200,200,200);
 }
 
@@ -19,9 +19,17 @@
     }
 }
 
+@keyframes load1 {
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+
 body {
     background: var(--body-bg);
-    padding: 2rem;
+    /* padding: 2rem; */
     touch-action: none;
 
     .lines {
@@ -34,7 +42,18 @@ body {
         background-image: 
         linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
-        background-size: 40px 40px;
+        background-size: 50px 50px;
+    }
+
+    .bg {
+        z-index: -2;
+        position: absolute;
+        top: 0; left: 0;
+        height: 100%; width: 100%;
+        background-image: url('../images/katsuno-bg.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
         .top {
@@ -136,18 +155,22 @@ body {
             place-items: center;
             justify-content: center;
 
-            .katsuno-bg {
-                background-image: url('../images/icon.webp');
+            .katsuno {
+                background-image: url('../images/katsuno-crest.png');
                 background-position: center;
                 background-size: cover;
-                opacity: 0.5;
+                opacity: 1;
                 height: 20rem; width: 20rem;
+                backdrop-filter: blur(2px);
+                border-radius: 5px;
+                animation: load1 2s ease-out;
             }
         }
     }
 
     @media(max-width: 1200px) {
-        .katsuno-bg {
+        .katsuno {
+            opacity: 0;
             display: none;
         }
     }
@@ -161,10 +184,6 @@ body {
 
         .hero {
             padding: 10px 20px;
-        }
-
-        h2 {
-            font-size: 12px;
         }
 
         .for-more-info {
