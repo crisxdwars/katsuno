@@ -65,6 +65,7 @@ body {
     background: var(--body-bg);
     /* padding: 2rem; */
     overflow: hidden;
+    touch-action: none;
 
     .lines {
         opacity: 0.08;
