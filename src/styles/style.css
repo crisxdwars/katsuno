@@ -91,49 +91,44 @@ body {
         background-size: cover;
     }
 
-        .top {
+    .top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        place-items: center;
+        padding: 20px;
+        .left {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
             place-items: center;
-            padding: 20px;
-
-            .left {
-                display: flex;
-                place-items: center;
-                gap: 10px;
-
-                h1 {
-                    font-size: 20px;
-                    background: linear-gradient(13deg, #171d4e, #171d4e, #3d4aa7, #171d4e, #171d4e);
-                    background-size: 100px 100px;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    background-clip: text;
-                    -webkit-animation: katsuno-text 10s ease infinite;
-                    -moz-animation: katsuno-text 10s ease infinite;
-                    -o-animation: katsuno-text 10s ease infinite;
-                    animation: katsuno-text 10s ease infinite;
-                }
+            gap: 10px;
+            h1 {
+                font-size: 20px;
+                background: linear-gradient(13deg, #171d4e, #171d4e, #3d4aa7, #171d4e, #171d4e);
+                background-size: 100px 100px;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                -webkit-animation: katsuno-text 10s ease infinite;
+                -moz-animation: katsuno-text 10s ease infinite;
+                -o-animation: katsuno-text 10s ease infinite;
+                animation: katsuno-text 10s ease infinite;
             }
-
-            .right {
-                button {
-                    background: var(--body-bg);
-                    border: var(--border);
-                    color: var(--text);
-                    padding: 8px;
-                    transition: all 0.2s ease-in-out;
-                    cursor: pointer;
-
-                    &:hover {
-                        background: rgba(100,100,100,0.1);
-                    }
+        }
+        .right {
+            button {
+                background: var(--body-bg);
+                border: var(--border);
+                color: var(--text);
+                padding: 8px;
+                transition: all 0.2s ease-in-out;
+                cursor: pointer;
+                &:hover {
+                    background: rgba(100,100,100,0.1);
                 }
             }
         }
     }
-    
+
     .hero {
         padding: 40px 100px;
         display: flex;
@@ -275,3 +270,4 @@ body {
             display: none;
         }
     }
+}
